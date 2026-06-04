@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const HackRegister = require("../Models/hack-reg");
+const HackRegister = require("../models/hack-reg");
 const { Student } = require("../../models/roles");
-const Hackathon = require("../Models/HackathonAdmin");
+const Hackathon = require("../models/HackathonAdmin");
 const { authenticateToken } = require("../../middleware/auth");
-const { uploadReceipt, getReceipt, deleteReceipt } = require("../Models/gridfs");
+const { uploadReceipt, getReceipt, deleteReceipt } = require("../models/gridfs");
 const mongoose = require("mongoose");
 
 // Helper function to calculate hackathon status
@@ -869,7 +869,7 @@ router.get('/approved/:hackathonId', authenticateToken, async (req, res) => {
   try {
     const { hackathonId } = req.params;
     const userId = req.user.userId || req.user.id || req.user._id;
-    const reg = await require('../Models/hack-reg').findOne({ hackathon: hackathonId });
+    const reg = await require('../models/hack-reg').findOne({ hackathon: hackathonId });
     if (!reg) return res.json([]);
     const approved = reg.students.filter(s => s.student.toString() === userId && s.status === 'approved');
     res.json(approved);

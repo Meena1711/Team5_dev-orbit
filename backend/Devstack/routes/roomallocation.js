@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const RoomAllocationBatch = require('../Models/roomallocation');
-const Hackathon = require('../Models/HackathonAdmin');
+const RoomAllocationBatch = require('../models/roomallocation');
+const Hackathon = require('../models/HackathonAdmin');
 const { Mentor } = require('../../models/roles');
 
 // Get all hackathons for dropdown with college and year filtering

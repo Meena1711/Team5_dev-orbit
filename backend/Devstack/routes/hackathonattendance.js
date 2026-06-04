@@ -2,10 +2,10 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const HackathonAttendance = require('../Models/hackathonattendance');
-const HackRegister = require('../Models/hack-reg');
+const HackathonAttendance = require('../models/hackathonattendance');
+const HackRegister = require('../models/hack-reg');
 const { Student } = require('../../models/roles');
-const Hackathon = require('../Models/HackathonAdmin');
+const Hackathon = require('../models/HackathonAdmin');
 const { authenticateToken, requireRole, normalizeUser } = require('../../middleware/auth');
 
 // Helper: is valid ObjectId

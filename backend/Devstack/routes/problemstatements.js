@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-const ProblemStatement = require("../Models/problemstatements");
-const HackMentor = require("../Models/Hackmentor");
-const HackTeam = require("../Models/hackteam");
+const ProblemStatement = require("../models/problemstatements");
+const HackMentor = require("../models/Hackmentor");
+const HackTeam = require("../models/hackteam");
 const { authenticateToken, requireRole } = require("../../middleware/auth");
 
 /**
@@ -135,7 +135,7 @@ router.get(
   async (req, res) => {
     try {
       const { teamId } = req.params;
-      const HackRegister = require("../Models/hack-reg");
+      const HackRegister = require("../models/hack-reg");
 
       console.log('[BACKEND] Get team problem statements - teamId:', teamId);
 
@@ -301,7 +301,7 @@ router.put('/:teamId/select-problem', authenticateToken, async (req, res) => {
     }
 
     // Fetch registration to verify team lead
-    const HackRegister = require('../Models/hack-reg');
+    const HackRegister = require('../models/hack-reg');
     const hackReg = await HackRegister.findOne({
       hackathon: team.hackathon,
       'students._id': team.teamLead,

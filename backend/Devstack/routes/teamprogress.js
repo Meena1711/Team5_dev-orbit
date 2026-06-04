@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const TeamProgress = require('../Models/teamprogress');
-const HackTeam = require('../Models/hackteam');
-const HackRegister = require('../Models/hack-reg');
+const TeamProgress = require('../models/teamprogress');
+const HackTeam = require('../models/hackteam');
+const HackRegister = require('../models/hack-reg');
 const { authenticateToken } = require("../../middleware/auth");
 
 // Helper function to check if user is team lead

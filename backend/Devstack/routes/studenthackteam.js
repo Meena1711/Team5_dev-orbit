@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const { authenticateToken, authenticateStudentToken } = require('../../middleware/auth');
-const HackTeams = require('../Models/hackteam');
-const Hackathon = require('../Models/HackathonAdmin');
-const HackRegister = require('../Models/hack-reg');
-const HackMentor = require('../Models/Hackmentor');
+const HackTeams = require('../models/hackteam');
+const Hackathon = require('../models/HackathonAdmin');
+const HackRegister = require('../models/hack-reg');
+const HackMentor = require('../models/Hackmentor');
 const { Student, Mentor } = require('../../models/roles');
-const TeamRequest = require('../Models/hackteamrequest');
-const TeamJoinRequest = require('../Models/hackjointeamrequest');
+const TeamRequest = require('../models/hackteamrequest');
+const TeamJoinRequest = require('../models/hackjointeamrequest');
 
 const TEAM_SIZE_LIMIT = 4;
 

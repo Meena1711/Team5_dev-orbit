@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Schedule = require("../Models/schedule"); // Adjust path as needed
-const Hackathon = require("../Models/HackathonAdmin"); 
+const Schedule = require("../models/schedule"); // Adjust path as needed
+const Hackathon = require("../models/HackathonAdmin"); 
 const { Mentor } = require('../../models/roles'); // Adjust path as needed
 const mongoose = require("mongoose");
 

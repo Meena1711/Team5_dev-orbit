@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const MentorFeedback = require('../Models/mentorfeedback');
-const Team = require('../Models/hackteam');
-const HackRegister = require('../Models/hack-reg');
+const MentorFeedback = require('../models/mentorfeedback');
+const Team = require('../models/hackteam');
+const HackRegister = require('../models/hack-reg');
 
 const { authenticateStudentToken } = require('../../middleware/auth');
 

@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const multer = require("multer");
-const HackathonSubmission = require("../Models/hacksubmission");
-const HackTeams = require("../Models/hackteam");
-const Hackathon = require("../Models/HackathonAdmin");
-const ProblemStatement = require("../Models/problemstatements");
-const HackRegister = require("../Models/hack-reg");
+const HackathonSubmission = require("../models/hacksubmission");
+const HackTeams = require("../models/hackteam");
+const Hackathon = require("../models/HackathonAdmin");
+const ProblemStatement = require("../models/problemstatements");
+const HackRegister = require("../models/hack-reg");
 
 // Configure multer for file uploads
 const storage = multer.memoryStorage();

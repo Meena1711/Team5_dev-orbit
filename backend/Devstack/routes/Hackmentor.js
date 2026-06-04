@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const HackMentor = require('../Models/Hackmentor');
+const HackMentor = require('../models/Hackmentor');
 const { authenticateToken, requireRole } = require('../../middleware/auth');
 
 // GET all hack mentors with pagination
