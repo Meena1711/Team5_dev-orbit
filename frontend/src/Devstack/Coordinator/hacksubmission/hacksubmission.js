@@ -26,8 +26,8 @@ const [coordinatorCollege] = useState(localStorage.getItem('coordinatordetails')
   const [useCoordinatorRoutes, setUseCoordinatorRoutes] = useState(false); // Toggle for coordinator-specific routes
 
   // API base URL - update this to match your backend
-  const API_BASE = 'http://localhost:5000/hacksubmission';
-  const HACKATHON_API = 'http://localhost:5000/hackathon';
+  const API_BASE = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/hacksubmission';
+  const HACKATHON_API = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/hackathon';
 
   useEffect(() => {
     fetchHackathons();

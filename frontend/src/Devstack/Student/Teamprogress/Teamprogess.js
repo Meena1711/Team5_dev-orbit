@@ -47,7 +47,7 @@ const TeamProgressPage = () => {
   const [editPercentage, setEditPercentage] = useState(0);
   const [editDescription, setEditDescription] = useState("");
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = (process.env.REACT_APP_BACKEND_URL || (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '');
   const token = localStorage.getItem("token");
   
   const userIdRaw = localStorage.getItem("student") || localStorage.getItem("userId");

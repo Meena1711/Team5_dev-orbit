@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 // Mock config - replace with your actual config
 const config = {
-  backendUrl: 'http://localhost:5000' // Update with your backend URL
+  backendUrl: (process.env.REACT_APP_BACKEND_URL || (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '') // Update with your backend URL
 };
 
 function TeamManagement() {

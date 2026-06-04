@@ -17,8 +17,8 @@ const MentorSubmissionDashboard = () => {
   const [mentorId, setMentorId] = useState(localStorage.getItem("mentor")); // Get from auth context
 
   // API base URL
-  const API_BASE = 'http://localhost:5000/hacksubmission';
-  const HACKATHON_API = 'http://localhost:5000/hackathon';
+  const API_BASE = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/hacksubmission';
+  const HACKATHON_API = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/hackathon';
 
   useEffect(() => {
     fetchHackathons();

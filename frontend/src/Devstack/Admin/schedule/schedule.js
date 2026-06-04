@@ -3,7 +3,7 @@ import { Plus, Edit, Trash2, Eye, Calendar, Clock, Users, Search, Filter, Chevro
 import { ConsoleSqlOutlined } from '@ant-design/icons';
 
 // API Service
-const API_BASE = 'http://localhost:5000/schedule'; // Adjust based on your backend URL
+const API_BASE = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/schedule'; // Adjust based on your backend URL
 
 const scheduleAPI = {
   getAll: (params = {}) => {
@@ -344,7 +344,7 @@ const ScheduleForm = ({ schedule, onSave, onCancel, hackathons }) => {
   useEffect(() => {
     // Fetch all schedules to get hackathon IDs
     (async () => {
-      const res = await fetch('http://localhost:5000/schedule');
+      const res = await fetch((process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/schedule');
       const data = await res.json();
       if (data.success) {
         setScheduledHackathonIds(data.data.map(s => s.hackathon?._id));

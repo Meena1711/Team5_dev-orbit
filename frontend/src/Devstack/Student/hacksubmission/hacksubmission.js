@@ -22,7 +22,7 @@ export default function HackathonSubmissionForm() {
   });
   const [hasDocuments, setHasDocuments] = useState(false); // Track document upload separately
 
-  const API_URL = 'http://localhost:5000/hacksubmission';
+  const API_URL = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/hacksubmission';
 
   const selectedHackathonId = localStorage.getItem("selectedHackathonId");
   const studentId = localStorage.getItem("student");

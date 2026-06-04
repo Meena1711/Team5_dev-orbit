@@ -272,7 +272,7 @@ const AdminApprovalDashboard = () => {
 
   // Helper functions for file URLs
   const getBackendUrl = () => {
-    return config.backendUrl || 'http://localhost:5000';
+    return config.backendUrl || (process.env.REACT_APP_BACKEND_URL || (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '');
   };
 
   const getPDFDownloadUrl = (requestId, view = false) =>

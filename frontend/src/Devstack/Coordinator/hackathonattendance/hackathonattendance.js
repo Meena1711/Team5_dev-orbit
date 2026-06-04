@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Check, X, AlertCircle, Info } from 'lucide-react';
 
 export default function HackathonAttendanceManagement() {
-  const API_BASE = 'http://localhost:5000';
+  const API_BASE = (process.env.REACT_APP_BACKEND_URL || (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '');
   
   const [hackathons, setHackathons] = useState([]);
   const [selectedHackathon, setSelectedHackathon] = useState('');

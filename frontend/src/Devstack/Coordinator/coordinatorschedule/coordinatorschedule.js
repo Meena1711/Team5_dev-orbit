@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin, User, Building, Clock, Download, Search, Filter } from 'lucide-react';
-const API_BASE = 'http://localhost:5000/roomallocation'
+const API_BASE = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/roomallocation'
 const ApprovedScheduleViewer = () => {
   const [scheduleData, setScheduleData] = useState(null);
   const [loading, setLoading] = useState(true);

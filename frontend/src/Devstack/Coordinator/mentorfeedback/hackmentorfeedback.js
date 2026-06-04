@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Search, Filter, Star, TrendingUp, Users, Award, ChevronRight, Mail, User } from 'lucide-react';
 
 // API Base URLs
-const API_BASE = 'http://localhost:5000/studenthackteam';
-const API_BASEs = 'http://localhost:5000/hackmentorfeedback';
-const API_HACKATHON = 'http://localhost:5000/hackathon';
+const API_BASE = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/studenthackteam';
+const API_BASEs = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/hackmentorfeedback';
+const API_HACKATHON = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/hackathon';
 
 export default function MentorFeedbackDashboard() {
   const [hackathons, setHackathons] = useState([]);

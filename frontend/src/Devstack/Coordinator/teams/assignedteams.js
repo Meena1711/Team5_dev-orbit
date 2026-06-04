@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Filter, AlertCircle, CheckCircle } from 'lucide-react';
 
 const config = {
-  backendUrl: 'http://localhost:5000'
+  backendUrl: (process.env.REACT_APP_BACKEND_URL || (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '')
 };
 
 function MentorTeamTabs() {

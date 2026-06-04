@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = 'http://localhost:5000/roomallocation';
+const API_BASE = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/roomallocation';
 
 const RoomAllocationTable = () => {
   const [scheduleData, setScheduleData] = useState(null);

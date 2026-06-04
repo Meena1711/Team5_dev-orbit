@@ -33,7 +33,7 @@ const MentorResourcesDashboard = () => {
 
   const mentorId = localStorage.getItem('mentorId') || localStorage.getItem('mentor');
   const token = localStorage.getItem('token');
-  const API_BASE = 'http://localhost:5000/mentorresources';
+  const API_BASE = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/mentorresources';
 
   const [formData, setFormData] = useState({
     requestType: 'item',
@@ -339,7 +339,7 @@ const MentorResourcesDashboard = () => {
     }
   };
 
-  const getBackendUrl = () => 'http://localhost:5000';
+  const getBackendUrl = () => (process.env.REACT_APP_BACKEND_URL || (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '');
 
   const getPDFDownloadUrl = (requestId, view = false) =>
     `${getBackendUrl()}/mentorresources/download/pdf/${requestId}${view ? '?view=1' : ''}`;

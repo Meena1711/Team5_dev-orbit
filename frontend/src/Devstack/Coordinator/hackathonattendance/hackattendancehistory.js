@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Download, Calendar, Users, FileText, AlertCircle, Search, Filter } from 'lucide-react';
 
 export default function AttendanceHistoryViewer() {
-  const API_BASE = 'http://localhost:5000';
+  const API_BASE = (process.env.REACT_APP_BACKEND_URL || (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '');
   
   const [hackathons, setHackathons] = useState([]);
   const [selectedHackathon, setSelectedHackathon] = useState('');

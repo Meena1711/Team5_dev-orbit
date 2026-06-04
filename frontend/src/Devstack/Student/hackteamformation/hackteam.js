@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Star, X, Send, Loader2, CheckCircle, AlertCircle, User, Mail, Github, Linkedin } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/studenthackteam';
-const API_BASEs = 'http://localhost:5000/hackmentorfeedback';
+const API_BASE = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/studenthackteam';
+const API_BASEs = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000') + '/hackmentorfeedback';
 
 const authHeaders = () => ({
   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
