@@ -1,0 +1,151 @@
+.mission-vision-container {
+    padding: 40px;
+    background-color: #ffffff;
+    margin-top: 0px;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mission, .vision {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center heading text within the header */
+    margin-bottom: 20px;
+    position: relative; /* allow absolute positioning of the vertical line */
+}
+
+.vertical-line {
+    width: 4px;
+    height: 30px;
+    background-color: #ff0000;
+    margin-right: 0; /* remove gap since it's absolutely positioned */
+    position: absolute;
+    left: 16px; /* position the decorative line on the left inside the card */
+}
+
+.missionvision {
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: bold;
+    margin: 0;
+    /* Fallback color for older browsers */
+    color: #0a2e73;
+    /* Gradient text */
+    background: linear-gradient(90deg, #0a2e73, #1e5bbf, #3a9bdc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* required for WebKit to make the gradient show */
+    display: block;
+    width: 100%;
+    text-align: center; /* center the heading text exactly */
+    padding-left: 40px; /* avoid overlap with absolutely positioned vertical line */
+}
+
+.mission-content, .vision-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.para {
+    flex: 1;
+    line-height: 1.7;
+    font-size: clamp(16px, 2vw, 20px);
+    margin: 0;
+}
+
+.mission-image, .vision-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet-specific styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .mission-vision-container {
+        padding: 30px;
+    }
+
+    .content-wrapper {
+        gap: 30px;
+    }
+
+    .mission-content, .vision-content {
+        gap: 15px;
+    }
+
+    .mission-image, .vision-image {
+        max-width: 300px; /* Reduced from 455px */
+        min-width: 250px; /* Ensures image doesn't get too small */
+    }
+
+    .para {
+        font-size: 16px; /* Slightly smaller text for better fit */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .mission-vision-container {
+        padding: 20px;
+    }
+
+    .content-wrapper {
+        gap: 40px;
+    }
+
+    .mission-content, .vision-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mission-image, .vision-image {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .mission .mission-image {
+        order: -1;
+    }
+
+    .vision-content {
+        flex-direction: column;
+    }
+
+    .vision-text {
+        order: -1;
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    .mission-vision-container {
+        padding: 15px;
+    }
+
+    .content-wrapper {
+        gap: 30px;
+    }
+
+    .section-header {
+        margin-bottom: 15px;
+    }
+
+    .vertical-line {
+        height: 24px;
+    }
+}

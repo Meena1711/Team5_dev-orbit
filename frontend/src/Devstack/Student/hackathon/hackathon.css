@@ -1,0 +1,114 @@
+/* hackathon.css */
+
+.hackathons-container {
+  max-width: 900px;
+  margin: 0rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding-top: 110px;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.status-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.status-buttons button {
+  padding: 0.5rem 1.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  background-color: white;
+  color: #3498db;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.2);
+}
+
+.status-buttons button:hover:not(.active) {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.35);
+}
+
+.status-buttons button.active {
+  background-color: #2980b9;
+  color: white;
+  border-color: #2980b9;
+  cursor: default;
+  box-shadow: 0 4px 10px rgba(41, 128, 185, 0.6);
+}
+
+.message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-top: 1rem;
+}
+
+.hackathon-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.hackathon-list li {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  transition: transform 0.2s ease;
+}
+
+.hackathon-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.hackathon-info {
+  flex-grow: 1;
+}
+
+.hackathon-info h3 {
+  margin: 0 0 0.6rem 0;
+  color: #34495e;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.hackathon-info p {
+  margin: 0.3rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.hackathon-poster img {
+  max-width: 180px;
+  min-width: 140px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.hackathon-poster img:hover {
+  transform: scale(1.05);
+}

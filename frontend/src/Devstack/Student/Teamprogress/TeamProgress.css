@@ -1,0 +1,220 @@
+.progress-container {
+  max-width: 672px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.progress-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #111827;
+}
+
+.progress-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group-padded {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  color: #111827;
+  transition: all 0.15s ease-in-out;
+}
+
+.form-input.disabled {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.form-input:focus:not(.disabled) {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 150ms ease-in-out;
+  margin-top: 0.5rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.submit-button.loading,
+.submit-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #dc2626;
+  padding: 0.75rem;
+  background-color: #fef2f2;
+  border-radius: 0.375rem;
+  border: 1px solid #fecaca;
+}
+
+.progress-card {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+
+.progress-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.progress-card p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.progress-card strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.team-members {
+  margin-top: 0.75rem;
+}
+
+.members-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-top: 0.5rem;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.members-list li {
+  padding-left: 0;
+  margin-left: 1rem;
+  color: #374151;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.team-info {
+  margin-top: 0.5rem;
+}
+
+.progress-bar-container {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 1.25rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background-color: #10b981;
+  height: 1.25rem;
+  transition: width 300ms ease;
+}
+
+.no-progress {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border: 1px dashed #d1d5db;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .progress-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .form-group-padded {
+    padding: 0;
+  }
+
+  .progress-title {
+    font-size: 1.25rem;
+  }
+
+  .progress-card-title {
+    font-size: 1.125rem;
+  }
+
+  .progress-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-container {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .progress-title {
+    font-size: 1.125rem;
+  }
+
+  .form-input {
+    padding: 0.5rem;
+  }
+
+  .submit-button {
+    padding: 0.625rem 0.875rem;
+  }
+}

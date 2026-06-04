@@ -1,0 +1,217 @@
+/* hackathonnotification.css */
+
+.notification-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.notification-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notification-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 40px;
+}
+
+.notification-content {
+  width: 100%;
+}
+
+.notification-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  /* text-align: center; */
+  margin: 40px 0 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.notifications-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notification-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  min-height: 80px;
+}
+
+.notification-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.notification-card.unread {
+  background: #fefefe;
+  border-left: 3px solid #3b82f6;
+}
+
+.notification-card.read {
+  background: white;
+  opacity: 0.9;
+}
+
+.notification-avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.notification-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.notification-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.notification-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.notification-date {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.unread-dot {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.no-notifications-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.no-notifications {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 16px;
+  color: #6b7280;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notification-container {
+    padding: 20px 16px;
+  }
+  
+  .notification-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  
+  .notification-card {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  
+  .notification-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .notification-heading {
+    font-size: 15px;
+  }
+  
+  .notification-description {
+    font-size: 13px;
+  }
+  
+  .notification-date {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-container {
+    padding: 16px 12px;
+  }
+  
+  .notification-title {
+    font-size: 24px;
+  }
+  
+  .notification-card {
+    padding: 14px 16px;
+  }
+}
+
+/* Animation for new notifications */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification-card.new {
+  animation: slideIn 0.3s ease-out;
+}

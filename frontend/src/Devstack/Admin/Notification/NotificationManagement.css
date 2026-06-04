@@ -1,0 +1,108 @@
+/* ================================
+   Notification Management Page Styles
+   ================================ */
+
+.notification-management-page {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Container */
+.notification-management-page .form-container {
+  margin: 0 auto;
+  padding: 24px;
+  padding-top: 80px; /* keeps space below header */
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Top View Notifications Button */
+.notification-management-page .view-notifications-btn-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Ant Form Headings */
+.notification-management-page h2.ant-typography {
+  margin-bottom: 8px;
+  color: #003049;
+  font-weight: 700;
+}
+
+.notification-management-page h4.ant-typography {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #003049;
+  font-weight: 600;
+}
+
+/* Divider Styling */
+.notification-management-page .ant-divider {
+  margin: 24px 0;
+}
+
+/* Buttons */
+.notification-management-page .ant-btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.notification-management-page .ant-btn-primary {
+  background-color: #003049;
+  border-color: #003049;
+}
+
+.notification-management-page .ant-btn-primary:hover,
+.notification-management-page .ant-btn-primary:focus {
+  background-color: #004b75;
+  border-color: #004b75;
+}
+
+.notification-management-page .ant-btn-dangerous {
+  background-color: #e63946;
+  border-color: #e63946;
+}
+
+.notification-management-page .ant-btn-dangerous:hover,
+.notification-management-page .ant-btn-dangerous:focus {
+  background-color: #c71c30;
+  border-color: #c71c30
+}
+
+/* Table */
+.notification-management-page .ant-table {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.notification-management-page .ant-table-thead > tr > th {
+  background: #003049 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-align: center;
+}
+
+.notification-management-page .ant-table-tbody > tr > td {
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.notification-management-page .ant-table-tbody > tr:hover > td {
+  background-color: #f8f9fa;
+}
+
+/* Popconfirm */
+.notification-management-page .ant-popover-message-title {
+  font-weight: 500;
+  color: #495057;
+}
+
+/* Toast Container positioning */
+.notification-management-page .Toastify__toast-container {
+  top: 80px;
+}
