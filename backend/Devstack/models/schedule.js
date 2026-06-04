@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Hackathon = require("../Models/HackathonAdmin"); // Import Hackathon model
+const Hackathon = require("../models/HackathonAdmin"); // Import Hackathon model
 
 const scheduleSchema = new mongoose.Schema(
   {
